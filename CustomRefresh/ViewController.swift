@@ -11,12 +11,23 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
   {
 
+
+    var refreshControl: UIRefreshControl!
+
     @IBOutlet weak var tableView: UITableView!
     var dataArray: Array<String> = ["One", "Two", "Three", "Four", "Five"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
+
+
+        refreshControl.backgroundColor = UIColor.redColor()
+        refreshControl.tintColor = UIColor.yellowColor()
+
+
+        refreshControl = UIRefreshControl()
+        self.tableView.addSubview(refreshControl)
         
     }
 
@@ -34,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
         cell.textLabel!.text = dataArray[indexPath.row]
 
