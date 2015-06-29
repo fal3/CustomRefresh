@@ -13,6 +13,7 @@
 		A20B936F1B40EEAC00B436DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20B936E1B40EEAC00B436DE /* Images.xcassets */; };
 		A20B93721B40EEAC00B436DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20B93701B40EEAC00B436DE /* LaunchScreen.xib */; };
 		A20B937E1B40EEAC00B436DE /* CustomRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B937D1B40EEAC00B436DE /* CustomRefreshTests.swift */; };
+		A20B93881B40F52800B436DE /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20B93871B40F52800B436DE /* RefreshContents.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A20B93771B40EEAC00B436DE /* CustomRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20B937C1B40EEAC00B436DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A20B937D1B40EEAC00B436DE /* CustomRefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRefreshTests.swift; sourceTree = "<group>"; };
+		A20B93871B40F52800B436DE /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				A20B93691B40EEAC00B436DE /* ViewController.swift */,
 				A20B936B1B40EEAC00B436DE /* Main.storyboard */,
 				A20B936E1B40EEAC00B436DE /* Images.xcassets */,
+				A20B93871B40F52800B436DE /* RefreshContents.xib */,
 				A20B93701B40EEAC00B436DE /* LaunchScreen.xib */,
 				A20B93651B40EEAC00B436DE /* Supporting Files */,
 			);
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20B936D1B40EEAC00B436DE /* Main.storyboard in Resources */,
+				A20B93881B40F52800B436DE /* RefreshContents.xib in Resources */,
 				A20B93721B40EEAC00B436DE /* LaunchScreen.xib in Resources */,
 				A20B936F1B40EEAC00B436DE /* Images.xcassets in Resources */,
 			);
@@ -409,6 +413,7 @@
 				A20B93831B40EEAC00B436DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20B93841B40EEAC00B436DE /* Build configuration list for PBXNativeTarget "CustomRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				A20B93861B40EEAC00B436DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

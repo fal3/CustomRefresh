@@ -17,23 +17,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var dataArray: Array<String> = ["One", "Two", "Three", "Four", "Five"]
 
+    var customView: UIView!
+
+    var labelsArray: Array<UILabel> = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
 
-
-        refreshControl.backgroundColor = UIColor.redColor()
-        refreshControl.tintColor = UIColor.yellowColor()
-
-
         refreshControl = UIRefreshControl()
-        self.tableView.addSubview(refreshControl)
-        
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        refreshControl.backgroundColor = UIColor.clearColor()
+        refreshControl.tintColor = UIColor.clearColor()
+
+
+        self.tableView.addSubview(refreshControl)
+
+         loadCustomRefreshContents()
+        
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -54,6 +55,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60.0
+    }
+
+
+    func loadCustomRefreshContents() {
+        let refreshContents = NSBundle.mainBundle().loadNibNamed("RefreshContents", owner: self, options: nil)
+
+
+        customView = refreshContents[0] as! UIView
+        customView.frame = refreshControl.bounds
+
+        for var i=0; i<customView.subviews.count; ++i {
+            labelsArray.append(customView.viewWithTag(i + 1) as! UILabel)
+        }
+
+        refreshControl.addSubview(customView)
+
     }
 
 
